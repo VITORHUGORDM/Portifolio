@@ -1,46 +1,176 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    <title>Vitor Hugo · Desenvolvedor Full Stack</title>
+    <meta
+      name="description"
+      content="Vitor Hugo, estudante de Sistemas de Informação e desenvolvedor full stack (TypeScript, Next.js, Node.js, Python). Procuro estágio ou vaga júnior em desenvolvimento de software."
     />
+    <meta name="theme-color" content="#0b0f19" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Vitor Hugo · Desenvolvedor Full Stack" />
+    <meta property="og:description" content="Estudante de Sistemas de Informação procurando estágio. Veja meus projetos." />
+    <meta property="og:image" content="assets/spotguide-hero.jpg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%2338bdf8'/%3E%3Ctext x='12' y='16.5' font-size='12' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%230b0f19'%3EVH%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="style.css" />
-    <title>Portfolio</title>
   </head>
-  <body>
-    <header>
-      <a href="#" class="logo">Vitor Hugo</a>
 
-      <nav>
-        <a href="#" class="active"> Home</a>
-        <a href="#" class="active">Sobre</a>
-        <a href="#" class="active">Contato</a>
-      </nav>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topo">
+      <div class="container topo__in">
+        <a class="marca" href="#inicio" aria-label="Vitor Hugo, início">VH</a>
+        <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+        <nav id="menu" class="menu" aria-label="Principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#tecnologias">Tecnologias</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
     </header>
-    <section class="home">
-      <div class="home-img">
-        <img src="main.jpeg" alt="" />
-      </div>
-      <div class="home-content">
-        <h1>Ola,Sou <span>Vitor Hugo</span></h1>
-        <h3 class="typing-text">Eu sou <span></span></h3>
-        <p>sou apaixonado em tecnologia pretendo ser dev tmj</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/vitorhugordm/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/VITORHUGORDM"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="https://www.instagram.com/v1tinftn/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
+
+    <main id="conteudo">
+      <section id="inicio" class="container hero">
+        <div class="hero__texto">
+          <p class="etiqueta"><span class="ponto" aria-hidden="true"></span> Disponível para estágio</p>
+          <h1>Oi, eu sou o <span class="destaque">Vitor Hugo</span>.</h1>
+          <p class="hero__subtitulo">
+            Estudante de Sistemas de Informação e desenvolvedor full stack. Construo aplicações web e mobile do banco de
+            dados à interface, com atenção a validação, segurança e desempenho.
+          </p>
+          <div class="acoes">
+            <a class="botao botao--principal" href="#projetos">Ver projetos</a>
+            <a class="botao" href="https://www.linkedin.com/in/vitorhugordm" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="botao" href="https://github.com/VITORHUGORDM" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+          <p class="local">Formosa, Goiás · Brasil</p>
         </div>
-        <a href="#" class="btn">Contate Me</a>
-      </div>
-    </section>
+        <img class="hero__foto" src="assets/foto.jpg" width="900" height="1200" alt="Vitor Hugo programando em um notebook" />
+      </section>
+
+      <section id="sobre" class="container secao">
+        <h2>Sobre</h2>
+        <div class="sobre">
+          <p>
+            Sou apaixonado por tecnologia e estou cursando Sistemas de Informação. Gosto de construir produtos completos e
+            de aprender com projetos reais: já trabalhei em um site de evento com pagamentos online, em um app de farmácia
+            em equipe e no <strong>SpotGuide</strong>, um guia turístico com todos os estados e cidades do Brasil.
+          </p>
+          <ul class="fatos">
+            <li><strong>Foco:</strong> TypeScript, React/Next.js e Node.js</li>
+            <li><strong>Também uso:</strong> Python/Django e React Native</li>
+            <li><strong>Procuro:</strong> estágio ou vaga júnior em desenvolvimento</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projetos" class="container secao">
+        <h2>Projetos</h2>
+        <div class="projetos">
+          <article class="projeto projeto--grande">
+            <img src="assets/spotguide-hero.jpg" width="1000" height="563" loading="lazy" alt="Página inicial do SpotGuide, com uma ilha flutuante ilustrada" />
+            <div class="projeto__corpo">
+              <h3>SpotGuide</h3>
+              <p>
+                Guia turístico e comercial dos 27 estados e 5.571 cidades do Brasil. Busca por filtros (preço, comodidades,
+                nota, distância e aberto agora), mapa, painel do comerciante com validação de CPF/CNPJ e CEP, avaliações e
+                app mobile. Monorepo com contratos de tipos compartilhados, 69 testes e CI.
+              </p>
+              <ul class="chips">
+                <li>TypeScript</li><li>Next.js</li><li>Fastify</li><li>Prisma</li><li>PostgreSQL</li><li>Expo</li>
+              </ul>
+              <p class="links"><a href="https://github.com/VITORHUGORDM/spotguide" target="_blank" rel="noopener noreferrer">Ver código →</a></p>
+            </div>
+          </article>
+
+          <article class="projeto">
+            <div class="projeto__capa projeto__capa--iesgo" aria-hidden="true"><span>IESGO<br />Sem Pijama</span></div>
+            <div class="projeto__corpo">
+              <h3>Iesgo Sem Pijama</h3>
+              <p>
+                Site de um evento da faculdade, no ar em produção: inscrições, loja, pagamentos pelo Asaas com webhook,
+                limite de requisições e rotas administrativas protegidas.
+              </p>
+              <ul class="chips"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>MySQL</li><li>Upstash Redis</li></ul>
+              <p class="links">
+                <a href="https://www.iesgosempijama.com.br" target="_blank" rel="noopener noreferrer">Ver site →</a>
+                <a href="https://github.com/VITORHUGORDM/app-IesgoSemPijama" target="_blank" rel="noopener noreferrer">Código →</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="projeto">
+            <div class="projeto__capa projeto__capa--farmacia" aria-hidden="true"><span>App<br />Farmácia</span></div>
+            <div class="projeto__corpo">
+              <h3>App Farmácia</h3>
+              <p>
+                Projeto em equipe, com app mobile e API. Contribuí com o login e cadastro, a recuperação de senha e as
+                correções de backend e de build para publicação na Play Store.
+              </p>
+              <ul class="chips"><li>React Native</li><li>Expo</li><li>Node.js</li><li>TypeScript</li></ul>
+              <p class="links">
+                <a href="https://github.com/VITORHUGORDM/app-farmacia" target="_blank" rel="noopener noreferrer">App →</a>
+                <a href="https://github.com/VITORHUGORDM/api-farmacia" target="_blank" rel="noopener noreferrer">API →</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="projeto">
+            <div class="projeto__capa projeto__capa--financas" aria-hidden="true"><span>Gerenciador<br />Financeiro</span></div>
+            <div class="projeto__corpo">
+              <h3>Gerenciador Financeiro</h3>
+              <p>
+                Controle de gastos pessoais com gráfico por categoria, máscara monetária e validação de entradas. Aplica
+                herança, encapsulamento e tratamento de exceções com o ORM do Django.
+              </p>
+              <ul class="chips"><li>Python</li><li>Django</li><li>SQLite</li></ul>
+              <p class="links"><a href="https://github.com/VITORHUGORDM/GerenciadorFinanceiro" target="_blank" rel="noopener noreferrer">Ver código →</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tecnologias" class="container secao">
+        <h2>Tecnologias</h2>
+        <div class="tecnologias">
+          <div>
+            <h3>Front-end</h3>
+            <ul class="chips"><li>TypeScript</li><li>JavaScript</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>HTML e CSS</li></ul>
+          </div>
+          <div>
+            <h3>Back-end</h3>
+            <ul class="chips"><li>Node.js</li><li>Fastify</li><li>Python</li><li>Django</li><li>REST</li><li>JWT</li></ul>
+          </div>
+          <div>
+            <h3>Dados</h3>
+            <ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>Prisma</li><li>Redis</li></ul>
+          </div>
+          <div>
+            <h3>Mobile e ferramentas</h3>
+            <ul class="chips"><li>React Native</li><li>Expo</li><li>Git e GitHub</li><li>GitHub Actions</li><li>Vitest</li><li>Vercel</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="container secao contato">
+        <h2>Vamos conversar?</h2>
+        <p>Estou procurando uma oportunidade de estágio ou vaga júnior. Me chame pelo LinkedIn.</p>
+        <div class="acoes">
+          <a class="botao botao--principal" href="https://www.linkedin.com/in/vitorhugordm" target="_blank" rel="noopener noreferrer">Falar no LinkedIn</a>
+          <a class="botao" href="https://github.com/VITORHUGORDM" target="_blank" rel="noopener noreferrer">Ver meu GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="container">© <span id="ano">2026</span> Vitor Hugo · Feito com HTML, CSS e um pouco de JavaScript.</div>
+    </footer>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
