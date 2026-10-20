@@ -259,28 +259,18 @@ h3 {
   grid-column: 1 / -1;
   flex-direction: row;
 }
-.projeto--grande img {
+.projeto.projeto--grande > img {
   width: 55%;
+  aspect-ratio: auto;
+  border-bottom: 0;
+  border-right: 1px solid var(--borda);
+}
+/* imagem de capa: sempre 16:9, qualquer que seja o tamanho do print */
+.projeto > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-}
-.projeto__capa {
-  display: grid;
-  place-items: center;
-  min-height: 9rem;
-  font-weight: 800;
-  font-size: 1.5rem;
-  text-align: center;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-}
-.projeto__capa--iesgo {
-  background: linear-gradient(135deg, #7c3aed, #ec4899);
-}
-.projeto__capa--farmacia {
-  background: linear-gradient(135deg, #059669, #38bdf8);
-}
-.projeto__capa--financas {
-  background: linear-gradient(135deg, #0f766e, #f59e0b);
+  border-bottom: 1px solid var(--borda);
 }
 .projeto__corpo {
   padding: 1.5rem;
@@ -372,8 +362,11 @@ h3 {
   .projeto--grande {
     flex-direction: column;
   }
-  .projeto--grande img {
+  .projeto.projeto--grande > img {
     width: 100%;
+    aspect-ratio: 16 / 9;
+    border-right: 0;
+    border-bottom: 1px solid var(--borda);
   }
 }
 
