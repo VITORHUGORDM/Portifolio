@@ -82,11 +82,22 @@ button:focus-visible {
   min-height: 4rem;
 }
 .marca {
-  font-weight: 800;
-  font-size: 1.25rem;
-  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
   color: var(--texto);
   text-decoration: none;
+}
+.marca__nome {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+.marca__papel {
+  padding-left: 0.9rem;
+  border-left: 1px solid var(--borda);
+  color: var(--suave);
+  font-size: 0.9rem;
 }
 .menu {
   display: flex;
@@ -386,6 +397,9 @@ h3 {
   .projetos,
   .tecnologias {
     grid-template-columns: 1fr;
+  }
+  .marca__papel {
+    display: none;
   }
   .menu-botao {
     display: inline-block;
